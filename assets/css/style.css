@@ -674,26 +674,104 @@ section {
   }
 }
 
+
 /*--------------------------------------------------------------
-# Our Clients
+# Green Edge
 --------------------------------------------------------------*/
-
-
-.clients .swiper-slide img {
-  opacity: 0.5;
-  transition: 0.3s;
+.green-edge {
+  background: var(--mainColor);
 }
 
-.clients .swiper-slide img:hover {
-  opacity: 1;
+.green-edge h2{
+  color: #fff;
 }
 
-.clients .swiper-pagination {
+.green-edge h2::after{
+  background:#fff;
+}
+
+.green-edge p{
+  color: #fff;
+  font-size: 18px;
+}
+
+.green-edge .btn-read-more-green-edge{
+  margin-top: 30px;
+  font-family: "Cairo", "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  line-height: 1;
+  color: var(--mainColor);
+  animation-delay: 0.8s;
+  background: #fff;
+}
+
+.green-edge .img-border{
+  display: grid;
+}
+
+@media (max-width: 992px) {
+  .green-edge .img-border {
+    width: inherit;
+  }
+}
+
+.green-edge .img-wrap {
+  position: relative;
+  padding: 20px;
+}
+.green-edge .img-wrap::after {
+  content: '';
+  border-radius: 999px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: conic-gradient(
+    from 30deg,
+    #6be89b,
+    var(--mainColor) 46%,
+    transparent 46%
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 3px),
+    #fff calc(100% - 3px + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 3px),
+    #fff calc(100% - 3px + 1px)
+  );
+}
+.green-edge img {
+  border-radius: 999px;
+  display: block;
+  width: calc(100vw - 80px);
+  max-width: 360px;
+  height: auto;
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+.gallery {
+  overflow: hidden;
+}
+
+.gallery .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet {
+.gallery .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -701,8 +779,26 @@ section {
   border: 1px solid var(--mainColor);
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet-active {
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--mainColor);
+}
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+
+  .gallery .swiper-slide-active {
+    border: 6px solid var(--mainColor);
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    transform: scale(1.2);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -852,18 +948,25 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Gallery Section
+# Our Clients
 --------------------------------------------------------------*/
-.gallery {
-  overflow: hidden;
+
+
+.clients .swiper-slide img {
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
-.gallery .swiper-pagination {
+.clients .swiper-slide img:hover {
+  opacity: 1;
+}
+
+.clients .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.gallery .swiper-pagination .swiper-pagination-bullet {
+.clients .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -871,26 +974,8 @@ section {
   border: 1px solid var(--mainColor);
 }
 
-.gallery .swiper-pagination .swiper-pagination-bullet-active {
+.clients .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--mainColor);
-}
-
-.gallery .swiper-slide-active {
-  text-align: center;
-}
-
-@media (min-width: 992px) {
-  .gallery .swiper-wrapper {
-    padding: 40px 0;
-  }
-
-  .gallery .swiper-slide-active {
-    border: 6px solid var(--mainColor);
-    padding: 4px;
-    background: #fff;
-    z-index: 1;
-    transform: scale(1.2);
-  }
 }
 
 /*--------------------------------------------------------------
