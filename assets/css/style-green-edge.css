@@ -357,38 +357,11 @@ h6 {
   display: block;
 }
 
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero-header {
-  position: relative;
-  padding-top: 12rem;
-  padding-bottom: 6rem;
-  background: url(../img/Green\ Edge/01.jpeg) center center no-repeat;
-  background-size: cover;
-}
-
-.hero-header::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, .1);
-  clip-path: polygon(66% 0, 100% 0, 100% 100%, 33% 100%);
-}
-
-.hero-header .container {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-header .breadcrumb-item+.breadcrumb-item::before {
-  color: var(--bs-light);
-}
-
-.hero-header {
+#hero {
   width: 100%;
   height: 70vh;
   background-color: rgba(9, 9, 9, 0.8);
@@ -396,59 +369,123 @@ h6 {
   position: relative;
 }
 
-.hero-header h2 {
+#hero .carousel,
+#hero .carousel-inner,
+#hero .carousel-item,
+#hero .carousel-item::before {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  /* right: 0; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#hero .carousel-item::before {
+  content: "";
+  /* background-color: rgba(44, 185, 214, 0.5); */
+  background-color: rgb(58 181 73);
+}
+
+#hero .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 50px;
+  right: 50px;
+}
+
+#hero .container {
+  text-align: center;
+}
+
+#hero .img-hero {
+  max-width: 30%;
+}
+
+#hero .img-hero .img-hero{
+  max-width: 30%;
+}
+
+#hero .fly-section{
+  position: absolute;
+  top: 82%;
+  opacity: 60%;
+  rotate: -12deg;
+}
+
+#hero h2 {
   color: #fff;
   margin-bottom: 20px;
   font-size: 48px;
   font-weight: 700;
 }
 
-.hero-header p {
+#hero p {
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
 }
 
-.hero-header .btn-get-started {
-  font-family: "Cairo", "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 4px;
-  transition: 0.5s;
-  line-height: 1;
-  color: #fff;
-  animation-delay: 0.8s;
-  background: var(--mainColor);
+#hero .span-hero {
+  color: #000;
 }
 
-.hero-header .btn-get-started:hover {
-  background: var(--hoverColor);
+
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
 }
 
 @media (max-width: 992px) {
-  .hero-header {
+  #hero {
     height: 100vh;
   }
 
-  .hero-header .carousel-container {
+  #hero .carousel-container {
     top: 66px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-header h2 {
+  #hero h2 {
     font-size: 28px;
   }
 }
 
+@media (min-width: 1024px) {
+
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
 @media (max-height: 500px) {
-  .hero-header {
+  #hero {
     height: 120vh;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
