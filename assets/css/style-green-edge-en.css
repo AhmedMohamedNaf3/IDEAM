@@ -404,20 +404,28 @@ h6 {
   text-align: center;
 }
 
+#hero .row-header {
+  align-items: center;
+}
 
 #hero .img-hero {
-  max-width: 30%;
+  max-width: 60%;
 }
 
-#hero .img-hero .img-hero {
+/* #hero .img-hero .img-hero {
   max-width: 30%;
-}
+} */
 
 #hero .fly-section {
   position: absolute;
-  top: 82%;
+  top: 55%;
   opacity: 60%;
-  rotate: 21deg;
+  direction: rtl;
+}
+
+#hero .fly-section .img-hero {
+  max-width: 15%;
+  rotate: -25deg;
 }
 
 #hero .span-hero {
@@ -437,23 +445,6 @@ h6 {
   color: #fff;
 }
 
-#hero .carousel-inner .carousel-item {
-  transition-property: opacity;
-  background-position: center top;
-}
-
-#hero .carousel-inner .carousel-item,
-#hero .carousel-inner .active.carousel-item-start,
-#hero .carousel-inner .active.carousel-item-end {
-  opacity: 0;
-}
-
-#hero .carousel-inner .active,
-#hero .carousel-inner .carousel-item-next.carousel-item-start,
-#hero .carousel-inner .carousel-item-prev.carousel-item-end {
-  opacity: 1;
-  transition: 0.5s;
-}
 
 #hero .btn-get-started {
   font-family: "Cairo","Raleway", sans-serif;
@@ -484,19 +475,24 @@ h6 {
   }
 }
 
+#hero .img-header {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   #hero h2 {
     font-size: 28px;
   }
-}
 
-@media (min-width: 1024px) {
+  #hero .img-header {
+    margin-bottom: 30px;
+  }
 
-  #hero .carousel-control-prev,
-  #hero .carousel-control-next {
-    width: 5%;
+  #hero .img-hero {
+    max-width: 35%;
   }
 }
+
 
 @media (max-height: 500px) {
   #hero {
@@ -683,17 +679,23 @@ section {
   background: var(--mainColor);
 }
 
-.appreciation-study h4 {
+@media (max-width: 767px) {
+  .appreciation-study .app-sty {
+    min-width: 516px;
+  }
+}
+
+.appreciation-study h3 {
   margin-top: 50px;
 }
 
 .appreciation-study h2,
-.appreciation-study h4 {
+.appreciation-study h3 {
   color: #fff;
 }
 
 .appreciation-study h2::after,
-.appreciation-study h4::after {
+.appreciation-study h3::after {
   background: #fff;
 }
 
