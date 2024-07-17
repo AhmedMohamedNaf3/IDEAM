@@ -669,13 +669,13 @@ section {
   color: #fff;
 }
 
-
+/* 
 @media (max-width: 767px) {
   .appreciation-study .app-sty {
-    min-width: 516px;
+     min-width: 516px; 
   }
 }
-
+ */
 
 .appreciation-study h3 {
   margin-top: 50px;

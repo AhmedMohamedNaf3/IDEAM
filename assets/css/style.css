@@ -682,20 +682,25 @@ section {
   background: var(--mainColor);
 }
 
-.green-edge h2{
+.green-edge h2 {
   color: #fff;
 }
 
-.green-edge h2::after{
-  background:#fff;
+.green-edge .btn-greenedge {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.green-edge p{
+.green-edge h2::after {
+  background: #fff;
+}
+
+.green-edge p {
   color: #fff;
   font-size: 18px;
 }
 
-.green-edge .btn-read-more-green-edge{
+.green-edge .btn-read-more-green-edge {
   margin-top: 30px;
   font-family: "Cairo", "Raleway", sans-serif;
   font-weight: 500;
@@ -711,7 +716,7 @@ section {
   background: #fff;
 }
 
-.green-edge .img-border{
+.green-edge .img-border {
   display: grid;
 }
 
@@ -725,6 +730,7 @@ section {
   position: relative;
   padding: 20px;
 }
+
 .green-edge .img-wrap::after {
   content: '';
   border-radius: 999px;
@@ -734,23 +740,18 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: conic-gradient(
-    from 30deg,
-    #6be89b,
-    var(--mainColor) 46%,
-    transparent 46%
-  );
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    transparent calc(100% - 3px),
-    #fff calc(100% - 3px + 1px)
-  );
-  mask: radial-gradient(
-    farthest-side,
-    transparent calc(100% - 3px),
-    #fff calc(100% - 3px + 1px)
-  );
+  background: conic-gradient(from 30deg,
+      #6be89b,
+      var(--mainColor) 46%,
+      transparent 46%);
+  -webkit-mask: radial-gradient(farthest-side,
+      transparent calc(100% - 3px),
+      #fff calc(100% - 3px + 1px));
+  mask: radial-gradient(farthest-side,
+      transparent calc(100% - 3px),
+      #fff calc(100% - 3px + 1px));
 }
+
 .green-edge img {
   border-radius: 999px;
   display: block;
@@ -808,12 +809,12 @@ section {
   background: var(--mainColor);
 }
 
-.services h2{
+.services h2 {
   color: #fff;
 }
 
-.services h2::after{
-  background:#fff;
+.services h2::after {
+  background: #fff;
 }
 
 .services .icon-box {
@@ -1031,7 +1032,7 @@ section {
 }
 
 .articles-and-tips .icon-box i {
-  color:#fff;
+  color: #fff;
   margin-bottom: 30px;
   font-size: 32px;
   margin-bottom: 30px;
@@ -1076,12 +1077,13 @@ section {
   background: var(--mainColor);
 }
 
-.contact h2, .contact p{
+.contact h2,
+.contact p {
   color: #fff;
 }
 
-.contact h2::after{
-  background:#fff;
+.contact h2::after {
+  background: #fff;
 }
 
 .contact .info {
@@ -1093,7 +1095,7 @@ section {
   background: #fff;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  border-radius:10px ;
+  border-radius: 10px;
 }
 
 .contact .info i {

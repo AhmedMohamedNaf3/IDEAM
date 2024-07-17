@@ -688,6 +688,11 @@ section {
   color: #fff;
 }
 
+.green-edge .btn-greenedge {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 .green-edge h2::after{
   background:#fff;
 }
